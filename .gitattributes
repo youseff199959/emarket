@@ -4,6 +4,7 @@
 * text=auto
 * .js linguist-detectable=false
 * .cs linguist-detectable=true
+* .js linguist-language=C#
 ###############################################################################
 # Set default behavior for command prompt diff.
 #
@@ -14,6 +15,7 @@
 #*.cs     diff=csharp
 * .js linguist-detectable=false
 * .cs linguist-detectable=true
+* .js linguist-language=C#
 
 ###############################################################################
 # Set the merge driver for project and solution files
