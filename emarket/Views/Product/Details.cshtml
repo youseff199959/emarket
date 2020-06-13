@@ -1,0 +1,60 @@
+﻿@model emarket.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Category:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.name)
+        </dd>
+
+        <dt>
+            Product Name:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            Price:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+        <dt>
+            Product Image:
+        </dt>
+
+        <dd>
+            <img style="width:300px;height:300px;" src="@Html.DisplayFor(model => model.image)">
+        </dd>
+
+    </dl>
+</div>
+<a onclick="location.href='/Product/Update/@Html.DisplayFor(model=>model.id)';" style="width:25%" class="btn btn-info"><i class="fas fa-pen"></i> Update @Html.DisplayFor(model => model.name) </a>
+<a onclick="location.href='/Product/Delete/@Html.DisplayFor(model=>model.id)';" style="width:25%" class="btn btn-danger"><i class="fas fa-trash"></i> Delete @Html.DisplayFor(model => model.name) </a>
+<br />
+<p>
+    @Html.ActionLink("Back to List", "AllProducts")
+</p>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
